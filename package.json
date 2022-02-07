@@ -1,0 +1,35 @@
+{
+	"name": "github-trends-cli",
+	"version": "1.0.1",
+	"description": "CLI to interact with GitHub Trends service",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AtIasShrugged/github-trends-cli"
+	},
+	"bin": {
+		"gh-trends": "bin/main.js"
+	},
+	"scripts": {
+		"prebuild": "rimraf bin",
+		"build": "tsc",
+		"start": "npm run build && node bin/main.js"
+	},
+	"keywords": [
+		"cli",
+		"github",
+		"trends",
+		"repositories"
+	],
+	"author": "AtlasShrugged",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.25.0",
+		"commander": "^9.0.0",
+		"inquirer": "^8.2.0",
+		"rimraf": "^3.0.2"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.15",
+		"typescript": "^4.5.5"
+	}
+}
